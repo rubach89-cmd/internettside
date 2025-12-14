@@ -46,7 +46,7 @@ if (contactForm) {
         // Sanitiser input - trim whitespace og begrens lengde
         // Vi bruker textContent senere som forhindrer XSS
         const sanitize = (str) => {
-            // Fjern HTML tags ved å erstatte < og > med whitespace
+            // Fjern HTML-tegn (< og >) og normaliser whitespace
             return str.trim()
                 .replace(/</g, '')
                 .replace(/>/g, '')
