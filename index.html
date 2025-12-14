@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Internettside som skal fikse alt">
+    <title>Internettside - Hjem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Internettside</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hjem">Hjem</a></li>
+                <li><a href="#om">Om</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hjem" class="hero">
+            <div class="container">
+                <h2>Velkommen til Internettside</h2>
+                <p class="lead">En side som skal fikse alt</p>
+                <a href="#om" class="btn btn-primary">Les mer</a>
+            </div>
+        </section>
+
+        <section id="om" class="about">
+            <div class="container">
+                <h2>Om oss</h2>
+                <p>Dette er en internettside under utvikling. Se TODO.md for detaljer om hva som skal implementeres videre.</p>
+            </div>
+        </section>
+
+        <section id="kontakt" class="contact">
+            <div class="container">
+                <h2>Kontakt</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Navn:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-post:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Melding:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Internettside. Alle rettigheter reservert.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
