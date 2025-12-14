@@ -129,7 +129,7 @@ const plantsData = [
     {
         id: 'squash',
         name: 'Squash',
-        icon: '🥒',
+        icon: '🫑',
         category: 'Fruktgrønnsaker',
         careLevel: 'medium',
         description: 'Squash er produktiv og lett å dyrke, men krever god plass.',
@@ -211,7 +211,7 @@ const plantsData = [
         sowing: 'Så 2-3 cm dypt. Plant ut med 1-2 meter avstand. Trenger enormt med plass.',
         care: 'Vann rikelig. Gjødsle godt. Kan beskjæres til 2-3 frukter for større gresskar.',
         harvest: 'Høst før frost (september-oktober). Skallet skal være hardt. God lagringsfrukt.',
-        yieldPerPlant: 10, // kg per plante
+        yieldPerPlant: 5, // kg per plante
         plantsPerM2: 0.5,
         rowSpacing: 200, // cm
         plantSpacing: 200 // cm

@@ -150,21 +150,27 @@ function initializeCalculator() {
 function calculatePlanting() {
     const plantId = document.getElementById('calc-plant').value;
     const desiredYield = parseFloat(document.getElementById('calc-yield').value);
+    const errorDiv = document.getElementById('calc-error');
+    const resultsDiv = document.getElementById('calc-results');
+    
+    // Hide previous results and errors
+    errorDiv.classList.add('hidden');
+    resultsDiv.classList.add('hidden');
     
     if (!plantId) {
-        alert('Vennligst velg en plante først.');
+        showError('Vennligst velg en plante først.');
         return;
     }
     
     if (!desiredYield || desiredYield <= 0) {
-        alert('Vennligst oppgi et gyldig tall for ønsket avling.');
+        showError('Vennligst oppgi et gyldig tall for ønsket avling.');
         return;
     }
     
     const plant = plantsData.find(p => p.id === plantId);
     
     if (!plant) {
-        alert('Kunne ikke finne planteinformasjon.');
+        showError('Kunne ikke finne planteinformasjon.');
         return;
     }
     
@@ -176,6 +182,14 @@ function calculatePlanting() {
     
     // Display results
     displayCalculationResults(plant, plantsNeeded, areaNeeded);
+}
+
+// Show error message
+function showError(message) {
+    const errorDiv = document.getElementById('calc-error');
+    errorDiv.textContent = message;
+    errorDiv.classList.remove('hidden');
+    errorDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 // Display calculation results
