@@ -179,7 +179,7 @@ section p {
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
-.contact button[type="submit"] {
+.contact .btn {
     width: 100%;
 }
 
@@ -189,6 +189,53 @@ footer {
     color: white;
     text-align: center;
     padding: 2rem 0;
+}
+
+/* Notifications */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 2rem;
+    color: white;
+    border-radius: 0.375rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+    animation: slideIn 0.3s ease-out;
+}
+
+.notification-success {
+    background-color: #10b981;
+}
+
+.notification-info {
+    background-color: #3b82f6;
+}
+
+.notification-exit {
+    animation: slideOut 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
 }
 
 /* Responsivt design */
