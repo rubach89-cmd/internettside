@@ -147,7 +147,7 @@ section p {
 }
 
 /* Kontaktskjema */
-.contact-form {
+.contact form {
     max-width: 600px;
     margin: 0 auto;
 }
@@ -177,11 +177,6 @@ section p {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-}
-
-.contact form {
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 .contact button[type="submit"] {
