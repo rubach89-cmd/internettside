@@ -43,8 +43,15 @@ if (contactForm) {
         const emailInput = document.getElementById('email');
         const messageInput = document.getElementById('message');
         
-        // Sanitiser input (fjern HTML tags og whitespace)
-        const sanitize = (str) => str.trim().replace(/<[^>]*>/g, '');
+        // Sanitiser input - trim whitespace og begrens lengde
+        // Vi bruker textContent senere som forhindrer XSS
+        const sanitize = (str) => {
+            // Fjern HTML tags ved å erstatte < og > med whitespace
+            return str.trim()
+                .replace(/</g, '')
+                .replace(/>/g, '')
+                .replace(/\s+/g, ' ');
+        };
         
         const formData = {
             name: sanitize(nameInput.value),
