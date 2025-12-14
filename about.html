@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Om Boken Planteboken - informasjon om vår demo nettside">
+    <title>Om Boken Boken - Demo Nettside</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="index.html" class="logo">
+                    <img src="assets/favicon.svg" alt="Logo" class="logo-img">
+                    <span>Plantebok Andørja</span>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="about.html" class="active">Om Boken</a></li>
+                    <li><a href="portfolio.html">Planteguide</a></li>
+                    <li><a href="privacy.html">Årshjul</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Om Boken Planteboken</h1>
+                <p class="page-subtitle">Informasjon om denne planteboken</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container content-container">
+                <div class="content-block">
+                    <h2>Vår Historie</h2>
+                    <p>Dette er en demo statisk nettside som viser et responsivt design med moderne funksjoner. Siden er bygget med ren HTML, CSS og minimal JavaScript, uten eksterne rammeverk.</p>
+                    <p>Innholdet på denne siden er placeholder-tekst og bør byttes ut med reelt innhold før produksjon.</p>
+                </div>
+
+                <div class="content-block">
+                    <h2>Vårt Oppdrag</h2>
+                    <p>Vårt oppdrag er å vise hvordan en enkel, responsiv nettside kan bygges uten komplekse rammeverk. Vi tror på enkelhet, ytelse og tilgjengelighet.</p>
+                    <p>Denne demo-siden kan brukes som utgangspunkt for din egen nettside. Tilpass design, innhold og funksjoner etter dine behov.</p>
+                </div>
+
+                <div class="content-block">
+                    <h2>Våre Verdier</h2>
+                    <ul class="styled-list">
+                        <li><strong>Enkelhet:</strong> Vi holder ting enkle og ryddige.</li>
+                        <li><strong>Ytelse:</strong> Rask lasting og god brukeropplevelse.</li>
+                        <li><strong>Responsivitet:</strong> Fungerer perfekt på alle enheter.</li>
+                        <li><strong>Tilgjengelighet:</strong> Tilgjengelig for alle brukere.</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>Teknologi</h2>
+                    <p>Denne nettsiden er bygget med:</p>
+                    <ul class="styled-list">
+                        <li>HTML5 for strukturen</li>
+                        <li>CSS3 for styling og responsivt design</li>
+                        <li>Vanilla JavaScript for interaktivitet</li>
+                        <li>SVG for logo/favicon</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>Hva Nå?</h2>
+                    <p>Dette er en demo-side. For å gjøre den produksjonsklar:</p>
+                    <ul class="styled-list">
+                        <li>Bytt ut all placeholder-tekst med reelt innhold</li>
+                        <li>Legg til dine egne bilder og media</li>
+                        <li>Tilpass farger og styling i CSS-filen</li>
+                        <li>Vurder å legge til et kontaktskjema</li>
+                        <li>Oppdater personvernerklæringen med korrekt informasjon</li>
+                        <li>Test grundig på forskjellige enheter og nettlesere</li>
+                    </ul>
+                </div>
+
+                <div class="cta-section">
+                    <h3>Vil du se mer?</h3>
+                    <p>Sjekk ut vår portefølje med demo-prosjekter.</p>
+                    <a href="portfolio.html" class="btn btn-primary">Se Planteguide</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Plantebok Andørja</h4>
+                    <p>En enkel demo statisk nettside.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Lenker</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Hjem</a></li>
+                        <li><a href="about.html">Om Boken</a></li>
+                        <li><a href="portfolio.html">Planteguide</a></li>
+                        <li><a href="privacy.html">Årshjul</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>Placeholder kontaktinformasjon</p>
+                    <p>E-post: demo@example.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Plantebok Andørja. Alle rettigheter reservert.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation toggle for mobile
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar')) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            }
+        });
+
+        // Update copyright year dynamically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
