@@ -248,20 +248,23 @@ footer {
 
 /* Respekter brukerens preferanse for redusert bevegelse */
 @media (prefers-reduced-motion: reduce) {
-    .notification {
+    .notification,
+    .notification-exit {
         animation: none;
     }
     
     .notification-exit {
-        animation: none;
         opacity: 0;
         transition: opacity 0.3s ease-out;
     }
     
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+    section,
+    .hero,
+    .hamburger span,
+    .nav-menu,
+    .btn {
+        animation: none;
+        transition: opacity 0.3s ease-out, background-color 0.3s ease, color 0.3s ease;
     }
 }
 
@@ -275,7 +278,7 @@ footer {
         background-color: var(--bg-color);
         width: 100%;
         text-align: center;
-        transition: 0.3s;
+        transition: left 0.3s ease;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
     }
