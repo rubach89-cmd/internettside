@@ -13,7 +13,7 @@ Dette er en demo statisk nettside bygget med ren HTML, CSS og minimal JavaScript
 - **index.html** - Hovedside med hero, funksjoner, portefølje-forhåndsvisning og footer
 - **about.html** - Om-side med informasjon om nettsiden
 - **portfolio.html** - Portefølje-side med demo-prosjekter
-- **privacy.md** - Demo personvernerklæring (må oppdateres før produksjon)
+- **privacy.html** - Demo personvernerklæring (må oppdateres før produksjon)
 - **assets/styles.css** - Responsiv styling uten eksterne rammeverk
 - **assets/favicon.svg** - Enkel SVG logo/favicon
 
@@ -71,7 +71,7 @@ Før nettsiden kan brukes i produksjon, bør du:
    - Cookie-banner (hvis du legger til cookies)
 
 4. **Oppdater personvern:**
-   - Les `privacy.md` og oppdater med korrekt informasjon
+   - Les `privacy.html` og oppdater med korrekt informasjon
    - Konsulter juridisk rådgiver for å sikre GDPR-compliance
    - Implementer cookie-samtykke hvis nødvendig
 

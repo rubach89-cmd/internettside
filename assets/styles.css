@@ -16,6 +16,9 @@
     --warning-color: #f59e0b;
     --danger-color: #ef4444;
     
+    --gradient-primary: #667eea;
+    --gradient-secondary: #764ba2;
+    
     --max-width: 1200px;
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -382,7 +385,7 @@ h2 {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-light);
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--gradient-primary) 0%, var(--gradient-secondary) 100%);
     color: white;
 }
 
