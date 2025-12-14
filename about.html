@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Om Demo Site - informasjon om vårt demo nettsted">
+    <title>Demo Nettside - Om Oss</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="assets/favicon.svg" alt="Logo" class="logo">
+                <span>Demo Site</span>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="about.html" class="active">Om Oss</a></li>
+                <li><a href="portfolio.html">Portefølje</a></li>
+                <li><a href="privacy.html">Personvern</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Om Oss</h1>
+            <p>Lær mer om Demo Site</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <h2>Velkommen til Demo Site</h2>
+                <p>Dette er en demo statisk nettside bygget med ren HTML, CSS og vanlig JavaScript. Målet med dette nettstedet er å demonstrere et enkelt, responsivt design uten behov for eksterne rammeverk eller biblioteker.</p>
+                
+                <h3>Vår Misjon</h3>
+                <p>Vår misjon er å vise hvordan man kan lage vakre og funksjonelle nettsider med moderne web-teknologier. Dette er et utgangspunkt som kan tilpasses og utvides etter dine behov.</p>
+
+                <h3>Hva Vi Tilbyr</h3>
+                <ul class="styled-list">
+                    <li><strong>Responsiv Design:</strong> Nettsiden fungerer perfekt på alle enheter, fra smarttelefoner til store desktop-skjermer.</li>
+                    <li><strong>Lett og Rask:</strong> Uten eksterne avhengigheter laster siden raskt og effektivt.</li>
+                    <li><strong>Moderne Estetikk:</strong> Rent design med fokus på brukervennlighet og tilgjengelighet.</li>
+                    <li><strong>Enkel å Tilpasse:</strong> Koden er strukturert og lett å forstå, slik at du enkelt kan gjøre endringer.</li>
+                </ul>
+
+                <h3>Teknologi</h3>
+                <p>Dette nettstedet er bygget med:</p>
+                <ul class="styled-list">
+                    <li>HTML5 for semantisk markup</li>
+                    <li>CSS3 for styling og responsivt design</li>
+                    <li>Vanilla JavaScript for interaktivitet</li>
+                    <li>SVG for skalerbar grafikk</li>
+                </ul>
+
+                <h3>Neste Steg</h3>
+                <p>Dette er en demo-side med plassholder-innhold. For å gjøre det til ditt eget nettsted, kan du:</p>
+                <ul class="styled-list">
+                    <li>Erstatte demo-innholdet med ditt eget innhold</li>
+                    <li>Legge til egne bilder og logoer</li>
+                    <li>Tilpasse farger og styling i CSS-filen</li>
+                    <li>Legge til flere sider etter behov</li>
+                    <li>Integrere et kontaktskjema om ønskelig</li>
+                </ul>
+
+                <div class="cta-box">
+                    <h3>Klar til å Komme i Gang?</h3>
+                    <p>Se våre demo-prosjekter eller les mer om hvordan du kan bruke denne malen.</p>
+                    <a href="portfolio.html" class="btn btn-primary">Se Portefølje</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Demo Site</h4>
+                    <p>En demo statisk nettside for testing og utvikling.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Lenker</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Hjem</a></li>
+                        <li><a href="about.html">Om Oss</a></li>
+                        <li><a href="portfolio.html">Portefølje</a></li>
+                        <li><a href="privacy.html">Personvern</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>Dette er en demo-side uten faktisk kontaktinformasjon.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Demo Site. Alle rettigheter reservert.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Dynamic year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
