@@ -93,6 +93,30 @@ Før nettsiden kan brukes i produksjon, bør du:
 - Vanilla JavaScript (nav toggle og dynamisk år)
 - SVG (logo/favicon)
 
+## Bilder / Credits
+
+Nettsiden bruker bilder fra følgende kilder med åpen lisens:
+
+### Hero Background
+- **Fil:** assets/images/hero-417173.jpg
+- **Kilde:** [Pexels Photo 417173](https://www.pexels.com/photo/blue-and-white-gradient-background-417173/)
+- **Fotograf:** Pixabay via Pexels
+- **Lisens:** [Pexels License](https://www.pexels.com/license/) (gratis for kommersiell og personlig bruk)
+
+### Portfolio Bilde 1
+- **Fil:** assets/images/portfolio-1481031.jpg
+- **Kilde:** [Pexels Photo 1481031](https://www.pexels.com/photo/person-holding-black-camera-1481031/)
+- **Fotograf:** Mwangi Gatheca
+- **Lisens:** [Pexels License](https://www.pexels.com/license/) (gratis for kommersiell og personlig bruk)
+
+### Portfolio Bilde 2
+- **Fil:** assets/images/portfolio-unsplash1.jpg
+- **Kilde:** [Unsplash Photo iFgRcqHznqg](https://unsplash.com/photos/iFgRcqHznqg)
+- **Fotograf:** STIL
+- **Lisens:** [Unsplash License](https://unsplash.com/license) (gratis for kommersiell og personlig bruk)
+
+**Merk:** Bildene som brukes i denne demoen er placeholder-bilder. Før produksjon bør du laste ned de faktiske bildene fra kildene over, eller erstatte dem med dine egne bilder.
+
 ## Lisens
 
 Dette er en demo-nettside. Tilpass etter dine behov.
