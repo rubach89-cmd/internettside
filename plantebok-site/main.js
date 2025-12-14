@@ -1,5 +1,5 @@
 // Enkel klientlogikk for å hente data/plants.json og vise arter
-const DATA_URL = '/plantebok-site/data/plants.json';
+const DATA_URL = './data/plants.json';
 
 async function loadPlants(){
   try{
