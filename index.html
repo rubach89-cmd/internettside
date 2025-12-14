@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planteguide - Århjul og Planteinformasjon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🌱 Interaktiv Planteguide</h1>
+        <p>Din komplette guide til planting gjennom året</p>
+    </header>
+
+    <main>
+        <!-- Århjul Section -->
+        <section id="yearly-wheel" class="section">
+            <h2>Århjul</h2>
+            <p class="section-description">Klikk på en måned for å se hvilke aktiviteter som passer</p>
+            <div class="wheel-container">
+                <div class="month-wheel">
+                    <div class="month-item" data-month="0">Januar</div>
+                    <div class="month-item" data-month="1">Februar</div>
+                    <div class="month-item" data-month="2">Mars</div>
+                    <div class="month-item" data-month="3">April</div>
+                    <div class="month-item" data-month="4">Mai</div>
+                    <div class="month-item" data-month="5">Juni</div>
+                    <div class="month-item" data-month="6">Juli</div>
+                    <div class="month-item" data-month="7">August</div>
+                    <div class="month-item" data-month="8">September</div>
+                    <div class="month-item" data-month="9">Oktober</div>
+                    <div class="month-item" data-month="10">November</div>
+                    <div class="month-item" data-month="11">Desember</div>
+                </div>
+                <div id="month-activities" class="activities-display">
+                    <h3>Velg en måned</h3>
+                    <p>Klikk på en måned i århjulet for å se aktiviteter</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plante Oversikt Section -->
+        <section id="plant-overview" class="section">
+            <h2>Velg Plante</h2>
+            <p class="section-description">Klikk på en plante for å se detaljert informasjon</p>
+            <div id="plant-grid" class="plant-grid">
+                <!-- Plants will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Plante Detaljer Section -->
+        <section id="plant-details" class="section hidden">
+            <div class="detail-header">
+                <h2 id="plant-name">Planteinformasjon</h2>
+                <button id="close-details" class="close-btn">✕</button>
+            </div>
+            <div class="detail-content">
+                <div class="detail-card">
+                    <h3>📝 Beskrivelse</h3>
+                    <p id="plant-description"></p>
+                </div>
+                <div class="detail-card">
+                    <h3>📅 Plantingstid</h3>
+                    <p id="plant-timing"></p>
+                </div>
+                <div class="detail-card">
+                    <h3>🌱 Såing og Planting</h3>
+                    <p id="plant-sowing"></p>
+                </div>
+                <div class="detail-card">
+                    <h3>🚿 Stell og Vedlikehold</h3>
+                    <p id="plant-care"></p>
+                </div>
+                <div class="detail-card">
+                    <h3>🌾 Høsting</h3>
+                    <p id="plant-harvest"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kalkulator Section -->
+        <section id="calculator" class="section">
+            <h2>Plantekalkulator</h2>
+            <p class="section-description">Beregn hvor mye du trenger å plante</p>
+            <div class="calculator-content">
+                <div class="calculator-input">
+                    <label for="calc-plant">Velg plante:</label>
+                    <select id="calc-plant">
+                        <option value="">Velg en plante...</option>
+                    </select>
+                </div>
+                <div class="calculator-input">
+                    <label for="calc-yield">Ønsket avling (kg):</label>
+                    <input type="number" id="calc-yield" min="1" value="10" step="1">
+                </div>
+                <button id="calc-button" class="calc-btn">Beregn</button>
+                <div id="calc-results" class="calc-results hidden">
+                    <h3>Resultater:</h3>
+                    <div class="result-item">
+                        <strong>Antall planter:</strong>
+                        <span id="result-plants"></span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Areal:</strong>
+                        <span id="result-area"></span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Radavstand:</strong>
+                        <span id="result-spacing"></span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Planteavstand:</strong>
+                        <span id="result-plant-spacing"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Planteguide - Laget med ❤️ for hageentusiaster</p>
+    </footer>
+
+    <script src="plants-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
