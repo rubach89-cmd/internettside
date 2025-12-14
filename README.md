@@ -9,7 +9,7 @@ Dette er en demo statisk nettside som viser et enkelt, responsivt design uten ek
 - **Hjemmeside** (`index.html`) - Landing page med hero-seksjon, funksjoner og porteføljeforhåndsvisning
 - **Om Oss** (`about.html`) - Informasjon om nettsiden og teknologien
 - **Portefølje** (`portfolio.html`) - Showcase av demo-prosjekter
-- **Personvern** (`privacy.md`) - Demo personvernerklæring
+- **Personvern** (`privacy.html`) - Demo personvernerklæring
 - **Responsiv CSS** (`assets/styles.css`) - Tilpasset styling uten eksterne CSS-rammeverk
 - **SVG Logo** (`assets/favicon.svg`) - Enkelt, skalerbart logo
 
@@ -59,7 +59,7 @@ internettside/
 ├── index.html          # Hovedside / landing page
 ├── about.html          # Om oss-side
 ├── portfolio.html      # Portefølje-side
-├── privacy.md          # Personvernerklæring
+├── privacy.html        # Personvernerklæring
 ├── assets/
 │   ├── styles.css      # Hoved CSS-fil
 │   └── favicon.svg     # Logo / favicon
@@ -125,7 +125,7 @@ Dette er en demo-side med placeholder-innhold. For å gjøre den til din egen:
 
 ## 🔒 Personvern
 
-Denne demo-nettsiden samler ikke inn personopplysninger. Les `privacy.md` for mer informasjon om hva du bør inkludere i en ekte personvernerklæring.
+Denne demo-nettsiden samler ikke inn personopplysninger. Les `privacy.html` for mer informasjon om hva du bør inkludere i en ekte personvernerklæring.
 
 ## 📄 Lisens
 
