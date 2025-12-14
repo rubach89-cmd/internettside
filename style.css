@@ -212,6 +212,14 @@ footer {
     background-color: #3b82f6;
 }
 
+.notification-warning {
+    background-color: #f59e0b;
+}
+
+.notification-error {
+    background-color: #ef4444;
+}
+
 .notification-exit {
     animation: slideOut 0.3s ease-out;
 }
@@ -235,6 +243,25 @@ footer {
     to {
         transform: translateX(400px);
         opacity: 0;
+    }
+}
+
+/* Respekter brukerens preferanse for redusert bevegelse */
+@media (prefers-reduced-motion: reduce) {
+    .notification {
+        animation: none;
+    }
+    
+    .notification-exit {
+        animation: none;
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+    }
+    
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
 

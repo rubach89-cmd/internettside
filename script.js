@@ -63,10 +63,16 @@ if (contactForm) {
 
 // Enkel notification funksjon
 function showNotification(message, type = 'info') {
+    // Valider type parameter for sikkerhet
+    const validTypes = ['info', 'success', 'warning', 'error'];
+    const safeType = validTypes.includes(type) ? type : 'info';
+    
     // Opprett notification element
     const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
+    notification.className = `notification notification-${safeType}`;
     notification.textContent = message;
+    notification.setAttribute('role', 'alert');
+    notification.setAttribute('aria-live', 'polite');
     
     document.body.appendChild(notification);
     
@@ -83,11 +89,16 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
+// Sjekk om bruker foretrekker redusert bevegelse
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            if (!prefersReducedMotion) {
+                entry.target.style.transform = 'translateY(0)';
+            }
         }
     });
 }, observerOptions);
@@ -95,7 +106,11 @@ const observer = new IntersectionObserver((entries) => {
 // Observer alle seksjoner
 document.querySelectorAll('section').forEach(section => {
     section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    if (!prefersReducedMotion) {
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    } else {
+        section.style.transition = 'opacity 0.6s ease';
+    }
     observer.observe(section);
 });
