@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Plantebok Andørja - Igeland — Nettside</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Plantebok Andørja — Igeland</h1>
+      <p class="tagline">Interaktiv og informativ nettside basert på Plantebok-Andorja-Igeland.pdf</p>
+    </div>
+  </header>
+
+  <nav class="container nav">
+    <a href="#summary">Sammendrag</a>
+    <a href="#plants">Planteoversikt</a>
+    <a href="#pdf">PDF</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+
+  <main class="container">
+    <section id="summary">
+      <h2>Sammendrag</h2>
+      <p>Dette er en interaktiv visning av innholdet i Plantebok-Andorja-Igeland.pdf. Nettsiden inneholder en oversikt over arter, bilder (hvis tilgjengelig), habitatopplysninger og en enkel quiz. Full tekst og bilder kan importeres fra PDF-en — dette er et startutkast.</p>
+      <ul>
+        <li>Forside med kort introduksjon</li>
+        <li>Side for arter (data lagret i data/plants.json)</li>
+        <li>Innebygd PDF-viewer og nedlastingslenke</li>
+        <li>Enkel quiz for å teste kunnskap</li>
+      </ul>
+    </section>
+
+    <section id="plants">
+      <h2>Planteoversikt</h2>
+      <div class="controls">
+        <input id="search" placeholder="Søk arter..." />
+        <select id="filter-habitat"><option value="">Alle habitater</option></select>
+      </div>
+      <div id="plant-list" class="grid"></div>
+    </section>
+
+    <section id="pdf">
+      <h2>Original PDF</h2>
+      <p>Du kan lese hele boka i innebygd viewer eller laste den ned.</p>
+      <div class="pdf-wrap">
+        <iframe id="pdf-frame" src="https://raw.githubusercontent.com/rubach89-cmd/plantebok-andorja/933b348fb4924e587acbd49335526156d0095e22/Plantebok-Andorja-Igeland.pdf" frameborder="0"></iframe>
+      </div>
+      <p><a class="button" href="https://raw.githubusercontent.com/rubach89-cmd/plantebok-andorja/933b348fb4924e587acbd49335526156d0095e22/Plantebok-Andorja-Igeland.pdf" target="_blank" rel="noopener">Last ned PDF</a></p>
+    </section>
+
+    <section id="quiz">
+      <h2>Quiz: Test kunnskapen</h2>
+      <div id="quiz-area">
+        <p>Trykk start for en enkel quiz basert på sample-data.</p>
+        <button id="start-quiz">Start quiz</button>
+        <div id="quiz-question"></div>
+        <div id="quiz-answers"></div>
+        <div id="quiz-result"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer container">
+    <p>Generert av Rubach89-cmd — startutkast. Innhold fra Plantebok-Andorja-Igeland.pdf.</p>
+  </footer>
+
+  <script src="./main.js" defer></script>
+</body>
+</html>
