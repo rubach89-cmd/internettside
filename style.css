@@ -174,7 +174,8 @@ section p {
 
 .form-group input:focus,
 .form-group textarea:focus {
-    outline: none;
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
@@ -264,7 +265,7 @@ footer {
     .nav-menu,
     .btn {
         animation: none;
-        transition: opacity 0.3s ease-out, background-color 0.3s ease, color 0.3s ease;
+        transition: opacity 0.3s ease-out, background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     }
 }
 

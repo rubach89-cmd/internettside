@@ -38,12 +38,40 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Hent skjemadata
+        // Hent og valider skjemadata
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+        
+        // Sanitiser input (fjern HTML tags og whitespace)
+        const sanitize = (str) => str.trim().replace(/<[^>]*>/g, '');
+        
         const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value
+            name: sanitize(nameInput.value),
+            email: sanitize(emailInput.value),
+            message: sanitize(messageInput.value)
         };
+        
+        // Valider data
+        if (!formData.name || formData.name.length < 2) {
+            showNotification('Vennligst oppgi et gyldig navn', 'error');
+            nameInput.focus();
+            return;
+        }
+        
+        // Enkel e-post validering
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            showNotification('Vennligst oppgi en gyldig e-postadresse', 'error');
+            emailInput.focus();
+            return;
+        }
+        
+        if (!formData.message || formData.message.length < 10) {
+            showNotification('Meldingen må være minst 10 tegn', 'error');
+            messageInput.focus();
+            return;
+        }
 
         // Her kan du legge til logikk for å sende skjemaet til en backend
         // TODO: Implementer backend integrasjon:
@@ -63,14 +91,17 @@ if (contactForm) {
 
 // Enkel notification funksjon
 function showNotification(message, type = 'info') {
-    // Valider type parameter for sikkerhet
+    // Valider og sanitiser input
     const validTypes = ['info', 'success', 'warning', 'error'];
     const safeType = validTypes.includes(type) ? type : 'info';
+    const safeMessage = String(message).trim().substring(0, 200); // Begrens lengde
+    
+    if (!safeMessage) return;
     
     // Opprett notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${safeType}`;
-    notification.textContent = message;
+    notification.textContent = safeMessage; // textContent forhindrer XSS
     notification.setAttribute('role', 'alert');
     notification.setAttribute('aria-live', 'polite');
     
