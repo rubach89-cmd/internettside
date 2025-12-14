@@ -95,6 +95,8 @@ Før nettsiden kan brukes i produksjon, bør du:
 
 ## Bilder / Credits
 
+**VIKTIG MERKNAD:** På grunn av nettverksbegrensninger under utviklingen, inneholder dette repositoriet midlertidige placeholder-bilder (minimale 1x1 JPEG-filer). For å få de faktiske bildene, vennligst følg instruksjonene i `INSTALLATION_NOTE.md`.
+
 Nettsiden bruker bilder fra følgende kilder med åpen lisens:
 
 ### Hero Background
