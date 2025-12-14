@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo static site - enkel, responsiv nettside">
+    <title>Demo Nettside</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="index.html" class="logo">
+                    <img src="assets/favicon.svg" alt="Logo" class="logo-img">
+                    <span>Demo Site</span>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Hjem</a></li>
+                    <li><a href="about.html">Om</a></li>
+                    <li><a href="portfolio.html">Portefølje</a></li>
+                    <li><a href="privacy.md">Personvern</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Velkommen til Demo Nettside</h1>
+                <p class="hero-subtitle">En enkel, responsiv statisk nettside</p>
+                <p class="hero-description">Dette er en demo-side med placeholder-innhold. Bytt ut tekst, bilder og lenker før produksjon.</p>
+                <div class="hero-buttons">
+                    <a href="portfolio.html" class="btn btn-primary">Se Portefølje</a>
+                    <a href="about.html" class="btn btn-secondary">Les Mer</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2>Funksjoner</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Rask & Lett</h3>
+                        <p>Ingen eksterne rammeverk, kun ren HTML, CSS og minimal JavaScript.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Responsiv</h3>
+                        <p>Ser bra ut på alle enheter - mobil, nettbrett og desktop.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Moderne Design</h3>
+                        <p>Rent og moderne design med god brukervennlighet.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Lett å Tilpasse</h3>
+                        <p>Enkelt å endre og tilpasse til dine behov.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Preview Section -->
+        <section class="portfolio-preview">
+            <div class="container">
+                <h2>Portefølje Forhåndsvisning</h2>
+                <p class="section-subtitle">Se noen av våre demo-prosjekter</p>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="placeholder-image">Prosjekt 1</div>
+                        </div>
+                        <h3>Demo Prosjekt 1</h3>
+                        <p>Beskrivelse av prosjekt 1. Dette er placeholder-tekst.</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="placeholder-image">Prosjekt 2</div>
+                        </div>
+                        <h3>Demo Prosjekt 2</h3>
+                        <p>Beskrivelse av prosjekt 2. Dette er placeholder-tekst.</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="placeholder-image">Prosjekt 3</div>
+                        </div>
+                        <h3>Demo Prosjekt 3</h3>
+                        <p>Beskrivelse av prosjekt 3. Dette er placeholder-tekst.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="portfolio.html" class="btn btn-primary">Se Alle Prosjekter</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Demo Site</h4>
+                    <p>En enkel demo statisk nettside.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Lenker</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Hjem</a></li>
+                        <li><a href="about.html">Om</a></li>
+                        <li><a href="portfolio.html">Portefølje</a></li>
+                        <li><a href="privacy.md">Personvern</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>Placeholder kontaktinformasjon</p>
+                    <p>E-post: demo@example.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Demo Site. Alle rettigheter reservert.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation toggle for mobile
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar')) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            }
+        });
+
+        // Update copyright year dynamically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
